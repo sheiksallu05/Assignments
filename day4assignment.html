@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>Registration Form</h3>
+    <form action="">
+        <!-- Name -->
+        <label for="name">Full Name</label><br>
+        <input
+        type="text"
+        id="name"
+        placeholder="Enter your full name"
+        required>
+        <br><br>
+        <!-- Email -->
+        <label for="email">Email</label><br>
+        <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required>
+        <br><br>
+        <!-- Password -->
+        <label for="password">Password</label><br>
+        <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        required>
+        <br><br>
+        <!-- Gender -->
+        <label style="font-size: large; font-weight: bold;">Gender</label><br>
+        <input
+        type="radio"
+        id="male"
+        name="gender"
+        required>
+        <label for="male">Male</label>
+        <br>
+        <input
+        type="radio"
+        id="female"
+        name="gender">
+        <label for="female">Female</label>
+        <br>
+        <input
+        type="radio"
+        id="other"
+        name="gender">
+        <label for="other">Other</label>
+        <br><br>
+        <!-- Hobbies -->
+        <label style="font-size: large; font-weight: bold;">Hobbies</label><br>
+        <input
+        type="checkbox"
+        id="coding">
+        <label for="coding">Coding</label>
+        <br>
+        <input
+        type="checkbox"
+        id="gaming">
+        <label for="gaming">Gaming</label>
+        <br>
+        <input
+        type="checkbox"
+        id="reading">
+        <label for="reading">Reading</label>
+        <br><br>
+        <!-- Age -->
+        <label for="age" style="font-size: large; font-weight: bold;">Age</label><br>
+        <input
+        type="number"
+        id="age"
+        placeholder="Enter your age"
+        min="18"
+        max="60"
+        required>
+        <br><br>
+        <!-- Submit Button -->
+        <input
+        type="submit"
+        value="Register">
+    </form>
+</body>
+</html>
