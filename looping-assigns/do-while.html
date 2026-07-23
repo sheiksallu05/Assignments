@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>JavaScript do-while Loop</h1>
+    <script>
+
+        //------1----------
+        let i = 1;
+
+do {
+    console.log(i + " ");
+    i++;
+}
+while (i <= 20);
+
+//--------2-----------
+
+let a = 1;
+
+do {
+    console.log(a + " ");
+    a += 2;
+}
+while (a <= 20);
+
+//---------3-----------
+let b = 0;
+
+do {
+    console.log(b + " ");
+    b += 2;
+}
+while (b <= 20);
+
+//----------4----------
+   let c = 0;
+
+do {
+    console.log(c + " ");
+    c += 5;
+}
+while (c <= 25);
+
+//-------5-------
+    let n = parseInt(prompt("Enter a number"));
+let d = 1;
+let sum = 0;
+
+do {
+    sum = sum + d;
+    d++;
+}
+while (d <= n);
+
+console.log("Sum = " + sum);
+
+//------6--------
+
+let z = parseInt(prompt("Enter limit"));
+let e = 0;
+let sam = 0;
+
+do {
+    sam = sam + e;
+    e += 2;
+}
+while (e <= z);
+
+console.log("Sum = " + sam);
+
+//--------7--------
+
+let ns = parseInt(prompt("Enter limit"));
+let f = 1;
+let suii = 0;
+
+do {
+    suii = suii + f;
+    f += 2;
+}
+while (f <= ns);
+
+console.log("Sum = " + suii);
+
+//--------8--------
+
+let ng = parseInt(prompt("Enter limit"));
+let g = 0;
+let suiii = 0;
+
+do {
+    suiii = suiii + g;
+    g += 5;
+}
+while (g <= ng);
+
+console.log("Sum = " + suiii);
+
+//--------9----------
+
+let nh = parseInt(prompt("Enter limit"));
+let h = 1;
+let sumh = 0;
+
+do {
+
+    let fact = 1;
+    let j = 1;
+
+    do {
+        fact = fact * j;
+        j++;
+    }
+    while (j <= h);
+
+    sumh = sumh + (h / fact);
+    h++;
+}
+while (h <= nh);
+
+console.log("Sum = " + sumh);
+
+//--------10----------
+
+let nj = parseInt(prompt("Enter limit"));
+let j = 0;
+let sumj = 0;
+
+do {
+
+    let fact = 1;
+    let k = 1;
+
+    do {
+        if (j == 0) break;
+        fact = fact * k;
+        k++;
+    }
+    while (k <= j);
+
+    sumj = sumj + (j / fact);
+    j += 2;
+}
+while (j <= nj);
+
+console.log("Sum = " + sumj);
+
+//--------11----------
+
+let nk = parseInt(prompt("Enter limit"));
+let k = 1;
+let sumk = 0;
+
+do {
+
+    let fact = 1;
+    let j = 1;
+
+    do {
+        fact = fact * j;
+        j++;
+    }
+    while (j <= k);
+
+    sumk = sumk + (k / fact);
+    k += 2;
+}
+while (k <= nk);
+
+console.log("Sum = " + sumk);
+
+    </script>
+
+</body>
+</html>

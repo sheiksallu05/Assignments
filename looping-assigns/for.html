@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript for Loop</h1>
+    <script>
+
+        //----------1-----------
+
+       for (let i = 1; i <= 20; i++) {
+    console.log(i + " ");
+}
+//---------2-----------
+    for (let a = 1; a <= 20; a += 2) {
+    console.log(a + " ");
+}
+
+//----------3----------
+
+for (let b = 0; b <= 20; b += 2) {
+    console.log(b + " ");
+}
+
+//----------4------------
+
+for (let c = 0; c <= 25; c += 5) {
+    console.log(c + " ");
+}
+
+//----------5------------
+    let n = parseInt(prompt("Enter a number"));
+let sum = 0;
+
+for (let d = 1; d <= n; d++) {
+    sum = sum + d;
+}
+
+console.log("Sum = " + sum);
+
+//----------6----------
+
+let z = parseInt(prompt("Enter limit"));
+let summ = 0;
+
+for (let e = 0; e <= z; e += 2) {
+    summ = summ + e;
+}
+
+console.log("Sum = " + summ);
+
+//--------7---------
+
+let nn = parseInt(prompt("Enter limit"));
+let sam = 0;
+
+for (let i = 1; i <= nn; i += 2) {
+    sam = sam + i;
+}
+
+console.log("Sum = " + sam);
+
+//----------8----------
+
+let g = parseInt(prompt("Enter limit"));
+let suii = 0;
+
+for (let i = 0; i <= g; i += 5) {
+    suii = suii + i;
+}
+
+console.log("Sum = " + suii);
+
+//---------9-----------
+
+let nh = parseInt(prompt("Enter limit"));
+let sumh = 0;
+
+for (let h = 1; h <= nh; h++) {
+
+    let fact = 1;
+
+    for (let j = 1; j <= h; j++) {
+        fact = fact * j;
+    }
+
+    sumh = sumh + (h / fact);
+}
+
+console.log("Sum = " + sumh);
+
+//---------10----------
+
+let ni = parseInt(prompt("Enter limit"));
+let sumi = 0;
+
+for (let j = 0; j <= ni; j += 2) {
+
+    let fact = 1;
+
+    for (let k = 1; k <= j; k++) {
+        fact = fact * k;
+    }
+
+    sumi = sumi + (j / fact);
+}
+
+console.log("Sum = " + sumi);
+
+//---------11----------
+
+
+
+    </script>
+</body>
+</html>
