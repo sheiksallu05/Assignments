@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>welcome to while loop continuing</h2>
+    <script>
+        //--------1--------
+        let na = parseInt(prompt("Enter a number"));
+        let ia = 1;
+        let fact = 1;
+
+        while (ia <= na) {
+            fact = fact * ia;
+            ia++;
+        }
+        console.log("Factorial = " + fact);
+
+        //--------2--------
+
+        let nb = parseInt(prompt("Enter a number"));
+        let ib = 2;
+        let prime = true;
+
+        while (ib < nb) {
+            if (nb % ib == 0) {
+                prime = false;
+                break;
+            }
+            ib++;
+        }
+
+        if (prime && nb > 1)
+            console.log("Prime Number");
+        else
+            console.log("Not Prime Number");
+
+        //--------3--------
+
+        let nc = parseInt(prompt("Enter limit"));
+        let numc = 2;
+
+        while (numc <= nc) {
+
+            let ic = 2;
+            let prime = true;
+
+            while (ic < numc) {
+                if (numc % ic == 0) {
+                    prime = false;
+                    break;
+                }
+                ic++;
+            }
+
+            if (prime) {
+                console.log(numc + " ");
+            }
+
+            numc++;
+        }
+
+        //--------4--------
+
+let numd = parseInt(prompt("Enter a number"));
+let temp = numd;
+let sumd = 0;
+
+while (temp > 0) {
+    let digit = temp % 10;
+    sumd = sumd + digit * digit * digit;
+    temp = parseInt(temp / 10);
+}
+
+if (sumd == numd)
+    console.log("Armstrong Number");
+else
+    console.log("Not Armstrong Number");
+
+    //--------5--------
+
+
+    let ne = parseInt(prompt("Enter limit"));
+let nume = 1;
+
+while (nume <= ne) {
+
+    let temp = nume;
+    let sume = 0;
+
+    while (temp > 0) {
+        let digit = temp % 10;
+        sume = sume + digit * digit * digit;
+        temp = parseInt(temp / 10);
+    }
+
+    if (sume == nume) {
+        console.log(nume + " ");
+    }
+
+    nume++;
+}
+
+//--------6--------
+
+let nf = parseInt(prompt("Enter limit"));
+
+let af = 0;
+let bf = 1;
+let fi = 3;
+
+console.log(af + " " + bf + " ");
+
+while (fi <= nf) {
+    let cf = af + bf;
+    console.log(cf + " ");
+    af = bf;
+    bf = cf;
+    fi++;
+}
+
+//--------7--------
+let ig = 1;
+
+while (ig <= 10) {
+    console.log("5 x " + ig + " = " + (5 * ig) + " ");
+    ig++;
+}
+
+//--------8--------
+
+let numh = parseInt(prompt("Enter a number"));
+let sumh = 0;
+
+while (numh > 0) {
+    sumh = sumh + (numh % 10);
+    numh = parseInt(numh / 10);
+}
+
+console.log("Sum of Digits = " + sumh);
+
+//--------9----------
+
+let stri = prompt("Enter a string");
+let revi = "";
+let ii = stri.length - 1;
+
+while (ii >= 0) {
+    revi = revi + stri[ii];
+    ii--;
+}
+
+if (stri == revi)
+    console.log("Palindrome");
+else
+    console.log("Not Palindrome");
+    </script>
+</body>
+
+</html>
