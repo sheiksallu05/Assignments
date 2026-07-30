@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>return parameter</h1>
+    <script>
+        //-------1----------
+        function series(limit) {
+
+            let result = "";
+
+            for (let i = 1; i <= limit; i++) {
+                result += i + " ";
+            }
+
+            return result;
+        }
+
+        console.log(series(20));
+
+        //--------2----------
+        function oddSeries(limit) {
+
+            let result = "";
+
+            for (let i = 1; i <= limit; i += 2) {
+                result += i + " ";
+            }
+
+            return result;
+        }
+
+        console.log(oddSeries(20));
+        //---------3----------
+        function evenSeries(limit) {
+
+            let result = "";
+
+            for (let i = 0; i <= limit; i += 2) {
+                result += i + " ";
+            }
+
+            return result;
+        }
+
+        console.log(evenSeries(20));
+        //---------4----------
+        function fiveSeries(limit) {
+
+            let result = "";
+
+            for (let i = 0; i <= limit; i += 5) {
+                result += i + " ";
+            }
+
+            return result;
+        }
+
+        console.log(fiveSeries(25));
+        //---------5----------
+        function sumSeries(limit) {
+
+            let sum = 0;
+
+            for (let i = 1; i <= limit; i++) {
+                sum += i;
+            }
+
+            return sum;
+        }
+
+        console.log(sumSeries(10));
+        //---------6----------
+        function evenSum(limit) {
+
+            let sum = 0;
+
+            for (let i = 0; i <= limit; i += 2) {
+                sum += i;
+            }
+
+            return sum;
+        }
+
+        console.log(evenSum(20));
+        //---------7----------
+        function oddSum(limit) {
+
+            let sum = 0;
+
+            for (let i = 1; i <= limit; i += 2) {
+                sum += i;
+            }
+
+            return sum;
+        }
+
+        console.log(oddSum(20));
+        //---------8----------
+        function fiveSum(limit) {
+
+            let sum = 0;
+
+            for (let i = 0; i <= limit; i += 5) {
+                sum += i;
+            }
+
+            return sum;
+        }
+
+        console.log(fiveSum(25));
+        //---------9----------
+        function factorialSeries(limit) {
+
+            let sum = 0;
+
+            for (let i = 1; i <= limit; i++) {
+
+                let fact = 1;
+
+                for (let j = 1; j <= i; j++) {
+                    fact *= j;
+                }
+
+                sum += i / fact;
+            }
+
+            return sum;
+        }
+
+        console.log(factorialSeries(5));
+        //---------10----------
+        function evenFactorialSeries(limit) {
+
+            let sum = 0;
+
+            for (let i = 0; i <= limit; i += 2) {
+
+                let fact = 1;
+
+                for (let j = 1; j <= i; j++) {
+                    fact *= j;
+                }
+
+                sum += i / fact;
+            }
+
+            return sum;
+        }
+
+        console.log(evenFactorialSeries(6));
+        //---------11---------
+        function oddFactorialSeries(limit) {
+
+            let sum = 0;
+
+            for (let i = 1; i <= limit; i += 2) {
+
+                let fact = 1;
+
+                for (let j = 1; j <= i; j++) {
+                    fact *= j;
+                }
+
+                sum += i / fact;
+            }
+
+            return sum;
+        }
+
+        console.log(oddFactorialSeries(5));
+        //---------12---------
+        function factorial(n) {
+
+            let fact = 1;
+
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+
+            return fact;
+        }
+
+        console.log(factorial(5));
+        //---------13---------
+        function primeCheck(n) {
+
+            let prime = true;
+
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+
+            return prime;
+        }
+
+        if (primeCheck(17))
+            console.log("Prime");
+        else
+            console.log("Not Prime");
+        //---------14---------
+        function primeSeries(limit) {
+
+            let result = "";
+
+            for (let i = 2; i <= limit; i++) {
+
+                let prime = true;
+
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        prime = false;
+                        break;
+                    }
+                }
+
+                if (prime)
+                    result += i + " ";
+            }
+
+            return result;
+        }
+
+        console.log(primeSeries(20));
+        //---------15---------
+        function armstrong(num) {
+
+            let temp = num;
+            let sum = 0;
+
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum += digit * digit * digit;
+                temp = parseInt(temp / 10);
+            }
+
+            return sum == num;
+        }
+
+        if (armstrong(153))
+            console.log("Armstrong Number");
+        else
+            console.log("Not Armstrong Number");
+        //---------16---------
+        function armstrongSeries(limit) {
+
+            let result = "";
+
+            for (let i = 1; i <= limit; i++) {
+
+                let temp = i;
+                let sum = 0;
+
+                while (temp > 0) {
+                    let digit = temp % 10;
+                    sum += digit * digit * digit;
+                    temp = parseInt(temp / 10);
+                }
+
+                if (sum == i) {
+                    result += i + " ";
+                }
+            }
+
+            return result;
+        }
+
+        console.log(armstrongSeries(500));
+        //---------17---------
+        function fibonacci(limit) {
+
+            let a = 0;
+            let b = 1;
+            let result = a + " " + b + " ";
+
+            for (let i = 3; i <= limit; i++) {
+                let c = a + b;
+                result += c + " ";
+                a = b;
+                b = c;
+            }
+
+            return result;
+        }
+
+        console.log(fibonacci(10));
+        //---------18----------
+        function table(num) {
+
+            let result = "";
+
+            for (let i = 1; i <= 10; i++) {
+                result += num + " x " + i + " = " + (num * i) + "";
+            }
+
+            return result;
+        }
+
+        console.log(table(5));
+        //---------19----------
+        function sumDigit(num) {
+
+            let sum = 0;
+
+            while (num > 0) {
+                sum += num % 10;
+                num = parseInt(num / 10);
+            }
+
+            return sum;
+        }
+
+        console.log(sumDigit(1234));
+        //---------20----------
+        function palindrome(str) {
+
+            let rev = "";
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                rev += str[i];
+            }
+
+            return str == rev;
+        }
+
+        if (palindrome("MADAM"))
+            console.log("Palindrome");
+        else
+            console.log("Not Palindrome");
+    </script>
+</body>
+
+</html>

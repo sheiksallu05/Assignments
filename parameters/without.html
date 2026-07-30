@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>without parameter</h1>
+    <script>
+        //-----------1-------------
+        function series() {
+            for (let i = 1; i <= 20; i++) {
+                console.log(i + " ");
+            }
+        }
+
+        series();
+        //----------2----------
+        function oddSeries() {
+
+            for (let i = 1; i <= 20; i += 2) {
+                console.log(i + " ");
+            }
+
+        }
+
+        oddSeries();
+        //---------3----------
+        function evenSeries() {
+
+            for (let i = 0; i <= 20; i += 2) {
+                console.log(i + " ");
+            }
+
+        }
+
+        evenSeries();
+        //---------4----------
+        function fiveSeries() {
+
+            for (let i = 0; i <= 25; i += 5) {
+                console.log(i + " ");
+            }
+
+        }
+
+        fiveSeries();
+        //---------5----------
+        function sumSeries() {
+
+            let sum = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                sum += i;
+            }
+
+            console.log(sum);
+
+        }
+
+        sumSeries();
+        //---------6----------
+        function evenSum() {
+
+            let sum = 0;
+
+            for (let i = 0; i <= 20; i += 2) {
+                sum += i;
+            }
+
+            console.log(sum);
+        }
+
+        evenSum();
+        //---------7----------
+        function oddSum() {
+
+            let sum = 0;
+
+            for (let i = 1; i <= 20; i += 2) {
+                sum += i;
+            }
+
+            console.log(sum);
+        }
+
+        oddSum();
+        //---------8----------
+        function fiveSum() {
+
+            let sum = 0;
+
+            for (let i = 0; i <= 25; i += 5) {
+                sum += i;
+            }
+
+            console.log(sum);
+        }
+
+        fiveSum();
+        //---------9----------
+        function factorialSeries() {
+
+            let sum = 0;
+
+            for (let i = 1; i <= 5; i++) {
+
+                let fact = 1;
+
+                for (let j = 1; j <= i; j++) {
+                    fact *= j;
+                }
+
+                sum += i / fact;
+            }
+
+            console.log(sum);
+        }
+
+        factorialSeries();
+        //---------10----------
+        function evenFactorialSeries() {
+
+            let sum = 0;
+
+            for (let i = 0; i <= 6; i += 2) {
+
+                let fact = 1;
+
+                for (let j = 1; j <= i; j++) {
+                    fact *= j;
+                }
+
+                sum += i / fact;
+            }
+
+            console.log(sum);
+        }
+
+        evenFactorialSeries();
+        //---------11---------
+        function oddFactorialSeries() {
+
+            let sum = 0;
+
+            for (let i = 1; i <= 5; i += 2) {
+
+                let fact = 1;
+
+                for (let j = 1; j <= i; j++) {
+                    fact *= j;
+                }
+
+                sum += i / fact;
+            }
+
+            console.log(sum);
+        }
+
+        oddFactorialSeries();
+        //---------12---------
+        function factorial() {
+
+            let n = 5;
+            let fact = 1;
+
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+
+            console.log(fact);
+        }
+
+        factorial();
+        //---------13---------
+        function primeCheck() {
+
+            let n = 17;
+            let prime = true;
+
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+
+            if (prime)
+                console.log("Prime");
+            else
+                console.log("Not Prime");
+        }
+
+        primeCheck();
+        //---------14---------
+        function primeSeries() {
+
+            for (let i = 2; i <= 20; i++) {
+
+                let prime = true;
+
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        prime = false;
+                        break;
+                    }
+                }
+
+                if (prime)
+                    console.log(i + " ");
+            }
+        }
+
+        primeSeries();
+        //---------15---------
+        function armstrong() {
+
+            let num = 153;
+            let temp = num;
+            let sum = 0;
+
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum += digit * digit * digit;
+                temp = parseInt(temp / 10);
+            }
+
+            if (sum == num)
+                console.log("Armstrong Number");
+            else
+                console.log("Not Armstrong Number");
+        }
+
+        armstrong();
+        //---------16---------
+        function armstrongSeries() {
+
+            for (let i = 1; i <= 500; i++) {
+
+                let temp = i;
+                let sum = 0;
+
+                while (temp > 0) {
+                    let digit = temp % 10;
+                    sum += digit * digit * digit;
+                    temp = parseInt(temp / 10);
+                }
+
+                if (sum == i) {
+                    console.log(i + " ");
+                }
+            }
+        }
+
+        armstrongSeries();
+        //---------17---------
+        function fibonacci() {
+
+            let a = 0;
+            let b = 1;
+
+            console.log(a + " " + b + " ");
+
+            for (let i = 3; i <= 10; i++) {
+                let c = a + b;
+                console.log(c + " ");
+                a = b;
+                b = c;
+            }
+        }
+
+        fibonacci();
+        //---------18----------
+        function table() {
+
+            for (let i = 1; i <= 10; i++) {
+                console.log("5 x " + i + " = " + (5 * i) + "");
+            }
+
+        }
+
+        table();
+        //---------19----------
+        function sumDigit() {
+
+            let num = 1234;
+            let sum = 0;
+
+            while (num > 0) {
+                sum += num % 10;
+                num = parseInt(num / 10);
+            }
+
+            console.log(sum);
+        }
+
+        sumDigit();
+        //---------20----------
+        function palindrome() {
+
+            let str = "MADAM";
+            let rev = "";
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                rev += str[i];
+            }
+
+            if (str == rev)
+                console.log("Palindrome");
+            else
+                console.log("Not Palindrome");
+        }
+
+        palindrome();
+    </script>
+</body>
+
+</html>
