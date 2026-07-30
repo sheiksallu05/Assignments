@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Advanced Array</h1>
+    <script>
+        //task 1
+        let arra = [10, 20, 30, 40, 50];
+        let sum = 0;
+
+        for (let i = 0; i < arra.length; i++) {
+            sum += arra[i];
+        }
+
+        let average = sum / arra.length;
+
+        console.log("Sum = " + sum);
+        console.log("Average = " + average);
+        //task 2
+        let arrb = [25, 10, 45, 18, 60];
+
+        let largest = arrb[0];
+
+        for (let i = 1; i < arrb.length; i++) {
+            if (arrb[i] > largest) {
+                largest = arrb[i];
+            }
+        }
+
+        console.log("Largest = " + largest);
+        //task 3
+        let arrc = [25, 10, 45, 18, 60];
+
+        let smallest = arrc[0];
+
+        for (let i = 1; i < arrc.length; i++) {
+            if (arrc[i] < smallest) {
+                smallest = arrc[i];
+            }
+        }
+
+        console.log("Smallest = " + smallest);
+        //task 4
+        let arrd = [10, -5, 20, -8, 15, -2];
+
+        let positive = 0;
+        let negative = 0;
+
+        for (let i = 0; i < arrd.length; i++) {
+
+            if (arrd[i] >= 0)
+                positive++;
+            else
+                negative++;
+        }
+
+        console.log("Positive = " + positive);
+        console.log("Negative = " + negative);
+        //task 5
+        let arre = [10, 20, 30, 20, 40, 10];
+
+        for (let i = 0; i < arre.length; i++) {
+
+            for (let j = i + 1; j < arre.length; j++) {
+
+                if (arre[i] == arre[j]) {
+                    console.log(arre[i]);
+                }
+
+            }
+
+        }
+        //task 6
+        let arrf = [10, 20, 30, 40, 50];
+
+        let search = 30;
+        let found = false;
+
+        for (let i = 0; i < arrf.length; i++) {
+
+            if (arrf[i] == search) {
+                found = true;
+                break;
+            }
+
+        }
+
+        if (found)
+            console.log("Element Found");
+        else
+            console.log("Element Not Found");
+        //task 7
+        let arrg = [10, 20, 10, 30, 20, 10];
+
+        for (let i = 0; i < arrg.length; i++) {
+
+            let count = 1;
+
+            if (arrg[i] == -1)
+                continue;
+
+            for (let j = i + 1; j < arrg.length; j++) {
+
+                if (arrg[i] == arrg[j]) {
+                    count++;
+                    arrg[j] = -1;
+                }
+
+            }
+
+            console.log(arrg[i] + " = " + count);
+        }
+        //task 8
+        let arrh = [10, 20, 30, 40, 50];
+
+        let sorted = true;
+
+        for (let i = 0; i < arrh.length - 1; i++) {
+
+            if (arrh[i] > arrh[i + 1]) {
+                sorted = false;
+                break;
+            }
+
+        }
+
+        if (sorted)
+            console.log("Array is Sorted");
+        else
+            console.log("Array is Not Sorted");
+        //task 9
+        let arri = [1, 2, 3, 5];
+
+        let n = 5;
+
+        let total = (n * (n + 1)) / 2;
+
+        let summ = 0;
+
+        for (let i = 0; i < arri.length; i++) {
+            summ += arri[i];
+        }
+
+        console.log("Missing Number = " + (total - summ));
+        //task 10
+        let arrj = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        let even = [];
+        let odd = [];
+
+        for (let i = 0; i < arrj.length; i++) {
+
+            if (arrj[i] % 2 == 0)
+                even.push(arrj[i]);
+            else
+                odd.push(arrj[i]);
+
+        }
+
+        console.log("Even Array = ", even);
+        console.log("Odd Array = ", odd);
+    </script>
+</body>
+
+</html>
