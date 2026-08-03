@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Customer Feedback Form</h2>
+
+        <form id="feedbackForm">
+
+            <label>Full Name</label>
+            <input type="text" id="name">
+
+            <label>Email Address</label>
+            <input type="email" id="email">
+
+            <h3>Reason for Visit</h3>
+
+            <input type="radio" name="reason" value="Product Purchase"> Product Purchase<br>
+
+            <input type="radio" name="reason" value="Customer Support"> Customer Support<br>
+
+            <input type="radio" name="reason" value="Browsing"> Browsing / Research<br>
+
+            <input type="radio" name="reason" value="Other"> Other<br>
+
+            <h3>Overall Satisfaction</h3>
+
+            <input type="radio" name="rating" value="1">1
+            <input type="radio" name="rating" value="2">2
+            <input type="radio" name="rating" value="3">3
+            <input type="radio" name="rating" value="4">4
+            <input type="radio" name="rating" value="5">5
+
+            <h3>Ease of Use</h3>
+
+            <select id="ease">
+
+                <option>Very Easy</option>
+
+                <option>Easy</option>
+
+                <option>Neutral</option>
+
+                <option>Difficult</option>
+
+                <option>Very Difficult</option>
+
+            </select>
+
+            <h3>Product Quality</h3>
+
+            <select id="quality">
+
+                <option>Excellent</option>
+
+                <option>Good</option>
+
+                <option>Average</option>
+
+                <option>Poor</option>
+
+                <option>Very Poor</option>
+
+            </select>
+
+            <h3>Customer Support</h3>
+
+            <select id="support">
+
+                <option>N/A</option>
+
+                <option>Extremely Helpful</option>
+
+                <option>Somewhat Helpful</option>
+
+                <option>Unhelpful</option>
+
+            </select>
+
+            <label>Recommendation Score</label>
+
+            <input type="number" id="score" min="0" max="10">
+
+            <h3>Improve</h3>
+
+            <input type="checkbox" value="Product Selection" class="improve"> Product Selection
+
+            <input type="checkbox" value="Pricing" class="improve"> Pricing
+
+            <input type="checkbox" value="Website" class="improve"> Website/App
+
+            <input type="checkbox" value="Delivery" class="improve"> Delivery
+
+            <input type="checkbox" value="Support" class="improve"> Customer Support
+
+            <label>Additional Comments</label>
+
+            <textarea id="comments"></textarea>
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

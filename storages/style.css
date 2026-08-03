@@ -1,0 +1,55 @@
+body{
+
+font-family:Arial;
+
+background:#f2f2f2;
+
+}
+
+.container{
+
+width:600px;
+
+margin:30px auto;
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px gray;
+
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+
+padding:10px;
+
+margin:8px 0;
+
+}
+
+button{
+
+padding:10px 20px;
+
+background:blue;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:darkblue;
+
+}
