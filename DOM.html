@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM task's</title>
+</head>
+
+<body>
+    <!-- //------task 1-------- -->
+    <h1 id="heading">Welcome</h1>
+
+    <button onclick="changeText()">Click</button>
+
+    <script>
+
+        function changeText() {
+
+            document.getElementById("heading").innerHTML = "Hello JavaScript";
+
+        }
+
+    </script>
+
+    <!-- //------task 2-------- -->
+
+    <p id="para">JavaScript DOM Example</p>
+
+    <button onclick="changeStyle()">Click</button>
+
+    <script>
+
+        function changeStyle() {
+
+            let p = document.getElementById("para");
+
+            p.style.color = "blue";
+
+            p.style.fontSize = "30px";
+
+        }
+
+    </script>
+
+    <!-- //------task 3-------- -->
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+
+    <script>
+
+        let p = document.getElementsByTagName("p");
+
+        for (let i = 0; i < p.length; i++) {
+
+            p[i].style.color = "green";
+
+        }
+
+    </script>
+    <!-- //------task 4-------- -->
+
+    <ul>
+
+        <li>HTML</li>
+
+        <li>CSS</li>
+
+        <li>JavaScript</li>
+
+        <li>Bootstrap</li>
+
+        <li>React</li>
+
+    </ul>
+
+    <p id="result"></p>
+
+    <script>
+
+        let items = document.getElementsByTagName("li");
+
+        document.getElementById("result").innerHTML = "Total Items = " + items.length;
+
+    </script>
+    <!-- //------task 5-------- -->
+
+    <p class="demo">Paragraph 1</p>
+
+    <p class="demo">Paragraph 2</p>
+
+    <p class="demo">Paragraph 3</p>
+
+    <script>
+
+        let pi = document.getElementsByClassName("demo");
+
+        for (let i = 0; i < pi.length; i++) {
+
+            pi[i].style.backgroundColor = "yellow";
+
+        }
+
+    </script>
+    <!-- //------task 6-------- -->
+    <button class="btn">One</button>
+    <button class="btn">Two</button>
+    <button class="btn">Three</button>
+    <button class="btn">Four</button>
+
+    <script>
+
+        let buttons = document.getElementsByClassName("btn");
+
+        for (let i = 0; i < buttons.length; i++) {
+
+            buttons[i].addEventListener("click", function () {
+
+                for (let j = 0; j < buttons.length; j++) {
+
+                    if (i != j) {
+                        buttons[j].disabled = true;
+                    }
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+    <!-- //------task 7-------- -->
+
+    <h1 id="title">Welcome</h1>
+
+    <button onclick="changeHeading()">Click</button>
+
+    <script>
+
+        function changeHeading() {
+
+            document.querySelector("#title").innerHTML = "DOM Learning";
+
+        }
+
+    </script>
+    <!-- //------task 8-------- -->
+    <p class="text">HTML</p>
+
+    <p class="text">CSS</p>
+
+    <p class="text">JavaScript</p>
+
+    <p class="text">Bootstrap</p>
+
+    <p class="text">React</p>
+
+    <script>
+
+        let t = document.querySelectorAll(".text");
+
+        for (let i = 0; i < t.length; i++) {
+
+            t[i].style.color = "red";
+
+            t[i].style.fontStyle = "italic";
+
+        }
+
+    </script>
+</body>
+
+</html>
