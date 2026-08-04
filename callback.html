@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 29 - Callback Function</title>
+</head>
+<body>
+
+<h2>JavaScript Callback Function</h2>
+
+<script>
+
+// ==============================
+// 1. Addition using Callback
+// ==============================
+
+function calculate(a, b, callback) {
+    callback(a, b);
+}
+
+function add(x, y) {
+    console.log("Addition = " + (x + y));
+}
+
+calculate(10, 20, add);
+
+
+// ==============================
+// 2. Greeting using Callback
+// ==============================
+
+function greetUser(name, callback) {
+    callback(name);
+}
+
+function welcome(name) {
+    console.log("Welcome " + name);
+}
+
+greetUser("Salman", welcome);
+
+
+// ==============================
+// 3. Double Array Elements
+// ==============================
+
+function processArray(arr, callback) {
+    callback(arr);
+}
+
+function doubleNumbers(arr) {
+
+    let result = arr.map(function(num) {
+        return num * 2;
+    });
+
+    console.log(result);
+}
+
+processArray([1,2,3,4,5], doubleNumbers);
+
+
+// ==============================
+// 4. Filter Positive Numbers
+// ==============================
+
+function filterNumbers(arr, callback) {
+    callback(arr);
+}
+
+function positiveNumbers(arr) {
+
+    let result = arr.filter(function(num) {
+        return num > 0;
+    });
+
+    console.log(result);
+}
+
+filterNumbers([-5,10,-2,20,30], positiveNumbers);
+
+
+// ==============================
+// 5. Find First Even Number
+// ==============================
+
+function findNumber(arr, callback) {
+    callback(arr);
+}
+
+function firstEven(arr) {
+
+    let result = arr.find(function(num) {
+        return num % 2 == 0;
+    });
+
+    console.log(result);
+}
+
+findNumber([5,7,9,12,15], firstEven);
+
+
+// ==============================
+// 6. Remove Negative Numbers
+// ==============================
+
+function removeNegative(arr, callback) {
+    callback(arr);
+}
+
+function remove(arr) {
+
+    let result = arr.filter(function(num) {
+        return num >= 0;
+    });
+
+    console.log(result);
+}
+
+removeNegative([-10,5,-3,20,15], remove);
+
+
+// ==============================
+// 7. Voting Eligibility
+// ==============================
+
+function checkEligibility(age, callback) {
+    callback(age);
+}
+
+function vote(age) {
+
+    if(age >= 18)
+        console.log("Eligible to Vote");
+    else
+        console.log("Not Eligible");
+
+}
+
+checkEligibility(21, vote);
+
+
+// ==============================
+// 8. Food Order using setTimeout
+// ==============================
+
+function orderFood(callback) {
+
+    console.log("Preparing Food...");
+
+    setTimeout(function(){
+
+        callback();
+
+    },3000);
+
+}
+
+function ready(){
+
+    console.log("Food is Ready");
+
+}
+
+orderFood(ready);
+
+
+// ==============================
+// 9. Sum of Array
+// ==============================
+
+function sumArray(arr, callback) {
+    callback(arr);
+}
+
+function total(arr) {
+
+    let sum = arr.reduce(function(total, num){
+
+        return total + num;
+
+    },0);
+
+    console.log("Sum = " + sum);
+
+}
+
+sumArray([10,20,30,40], total);
+
+
+// ==============================
+// 10. Sort Array
+// ==============================
+
+function sortArray(arr, callback) {
+    callback(arr);
+}
+
+function ascending(arr){
+
+    arr.sort(function(a,b){
+
+        return a-b;
+
+    });
+
+    console.log(arr);
+
+}
+
+sortArray([25,10,40,5,30], ascending);
+
+</script>
+
+</body>
+</html>
