@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class & Objects</title>
+</head>
+<body>
+
+<h2>JavaScript Class & Objects</h2>
+
+<script>
+
+// ==========================
+// Object
+// ==========================
+
+let student = {
+    name: "Salman",
+    age: 21,
+    course: "BCA"
+};
+
+console.log("Object");
+console.log(student);
+
+// Access Property
+console.log(student.name);
+
+// Add Property
+student.city = "Tiruvannamalai";
+console.log(student);
+
+// Update Property
+student.age = 22;
+console.log(student);
+
+// Delete Property
+delete student.course;
+console.log(student);
+
+// Loop Object
+console.log("Object Properties");
+
+for(let key in student){
+    console.log(key + " : " + student[key]);
+}
+
+// ==========================
+// Student Class
+// ==========================
+
+class Student{
+
+    constructor(name, age, course){
+
+        this.name = name;
+        this.age = age;
+        this.course = course;
+
+    }
+
+    display(){
+
+        console.log("Name : " + this.name);
+        console.log("Age : " + this.age);
+        console.log("Course : " + this.course);
+
+    }
+
+}
+
+let s1 = new Student("Salman",21,"BCA");
+let s2 = new Student("Rahul",22,"B.Sc");
+
+console.log("Student Objects");
+
+s1.display();
+s2.display();
+
+// ==========================
+// Employee Class
+// ==========================
+
+class Employee{
+
+    constructor(id,name,salary){
+
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+
+    }
+
+    display(){
+
+        console.log("ID : " + this.id);
+        console.log("Name : " + this.name);
+        console.log("Salary : " + this.salary);
+
+    }
+
+}
+
+let emp = new Employee(101,"Arun",30000);
+
+console.log("Employee");
+
+emp.display();
+
+// ==========================
+// Car Class
+// ==========================
+
+class Car{
+
+    constructor(brand,model){
+
+        this.brand = brand;
+        this.model = model;
+
+    }
+
+    display(){
+
+        console.log("Brand : " + this.brand);
+        console.log("Model : " + this.model);
+
+    }
+
+}
+
+let car = new Car("Toyota","Innova");
+
+console.log("Car");
+
+car.display();
+
+</script>
+
+</body>
+</html>
