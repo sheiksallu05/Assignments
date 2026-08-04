@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JS Events Demo</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            text-align:center;
+        }
+
+        #box{
+            width:150px;
+            height:150px;
+            background:red;
+            margin:20px auto;
+            line-height:150px;
+            color:white;
+        }
+        </style>
+</head>
+<body>
+
+<h1 id="heading">JavaScript Events</h1>
+
+<button id="clickBtn">Click</button>
+
+<button id="dblBtn">Double Click</button>
+
+<button id="colorBtn">Background Color</button>
+
+<br><br>
+
+<input type="text" id="name" placeholder="Type your name">
+
+<h3 id="output"></h3>
+
+<div id="box">Mouse</div>
+
+<br>
+
+<select id="course">
+    <option>HTML</option>
+    <option>CSS</option>
+    <option>JavaScript</option>
+</select>
+
+<p id="courseName"></p>
+
+<script>
+
+// Click Event
+document.getElementById("clickBtn").addEventListener("click",function(){
+
+document.getElementById("heading").innerHTML="Button Clicked";
+
+});
+
+// Double Click
+document.getElementById("dblBtn").addEventListener("dblclick",function(){
+
+alert("Double Click Event");
+
+});
+
+// Background Color
+document.getElementById("colorBtn").addEventListener("click",function(){
+
+document.body.style.backgroundColor="lightblue";
+
+});
+
+// Keyup
+document.getElementById("name").addEventListener("keyup",function(){
+
+document.getElementById("output").innerHTML=this.value;
+
+});
+
+// Focus
+document.getElementById("name").addEventListener("focus",function(){
+
+this.style.backgroundColor="yellow";
+
+});
+
+// Blur
+document.getElementById("name").addEventListener("blur",function(){
+
+this.style.backgroundColor="white";
+
+});
+
+// Mouse Over
+document.getElementById("box").addEventListener("mouseover",function(){
+
+this.style.backgroundColor="green";
+
+this.innerHTML="Mouse Over";
+
+});
+
+// Mouse Out
+document.getElementById("box").addEventListener("mouseout",function(){
+
+this.style.backgroundColor="red";
+
+this.innerHTML="Mouse";
+
+});
+
+// Change Event
+document.getElementById("course").addEventListener("change",function(){
+
+document.getElementById("courseName").innerHTML="Selected : "+this.value;
+
+});
+
+</script>
+</body>
+</html>
