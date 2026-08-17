@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 32 - Destructuring, Spread & Rest</title>
+</head>
+<body>
+
+<h2>JavaScript Destructuring, Spread & Rest</h2>
+
+<script>
+
+// ==========================================
+// 1. Array Destructuring
+// ==========================================
+
+let numbers = [10, 20, 30, 40, 50];
+
+let [first, second] = numbers;
+
+console.log("1. First Number : " + first);
+console.log("1. Second Number : " + second);
+
+
+// ==========================================
+// 2. Array Destructuring with Rest Operator
+// ==========================================
+
+let colors = ["Red", "Blue", "Green", "Yellow", "Black"];
+
+let [color1, ...remainingColors] = colors;
+
+console.log("2. First Color : " + color1);
+console.log("2. Remaining Colors : ", remainingColors);
+
+
+// ==========================================
+// 3. Object Destructuring
+// ==========================================
+
+let person = {
+    name: "Salman",
+    age: 21,
+    city: "Chennai"
+};
+
+let {name, age, city} = person;
+
+console.log("3. Name : " + name);
+console.log("3. Age : " + age);
+console.log("3. City : " + city);
+
+
+// ==========================================
+// 4. Rename Object Property
+// ==========================================
+
+let student = {
+    name: "Arun",
+    age: 20,
+    course: "BCA"
+};
+
+let {
+    name: studentName,
+    age: studentAge,
+    course
+} = student;
+
+console.log("4. Student Name : " + studentName);
+console.log("4. Student Age : " + studentAge);
+console.log("4. Course : " + course);
+
+
+// ==========================================
+// 5. Merge Two Arrays using Spread
+// ==========================================
+
+let fruits1 = ["Apple", "Banana"];
+
+let fruits2 = ["Mango", "Orange"];
+
+let allFruits = [...fruits1, ...fruits2];
+
+console.log("5. Merged Array : ", allFruits);
+
+
+// ==========================================
+// 6. Add Elements Beginning and End
+// ==========================================
+
+let oldNumbers = [2, 3, 4];
+
+let newNumbers = [1, ...oldNumbers, 5];
+
+console.log("6. New Array : ", newNumbers);
+
+
+// ==========================================
+// 7. Add City to Object using Spread
+// ==========================================
+
+let user = {
+    name: "Salman",
+    age: 21
+};
+
+let newUser = {
+    ...user,
+    city: "Chennai"
+};
+
+console.log("7. New Object : ", newUser);
+
+
+// ==========================================
+// 8. Function with Rest Operator
+// ==========================================
+
+function sum(...numbers) {
+
+    let total = 0;
+
+    for(let num of numbers) {
+        total = total + num;
+    }
+
+    return total;
+}
+
+console.log("8. Sum : " + sum(10, 20, 30, 40));
+
+
+// ==========================================
+// 9. Name + Remaining Arguments
+// ==========================================
+
+function display(name, ...subjects) {
+
+    console.log("9. Name : " + name);
+    console.log("9. Subjects : ", subjects);
+
+}
+
+display("Salman", "HTML", "CSS", "JavaScript", "MySQL");
+
+
+// ==========================================
+// 10. Destructuring with Rest
+// ==========================================
+
+let sixNumbers = [10, 20, 30, 40, 50, 60];
+
+let [firstNumber, ...remainingNumbers] = sixNumbers;
+
+console.log("10. First Number : " + firstNumber);
+console.log("10. Remaining Numbers : ", remainingNumbers);
+
+</script>
+
+</body>
+</html>
