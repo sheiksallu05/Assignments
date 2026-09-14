@@ -1,0 +1,29 @@
+body{
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+    display: inline-block;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.content {
+    margin-bottom: 15px;
+}
+
+.footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-weight: bold;
+}
